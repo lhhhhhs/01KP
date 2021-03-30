@@ -170,4 +170,33 @@ public class Utils {
         }
     }
 
+    public static int getC(int index){
+        if (index == 1){
+            return 10;
+        }else if (index == 2){
+            return 100;
+        }else if (index == 3){
+            return 200;
+        }else if (index == 4){
+            return 300;
+        }else if (index == 5){
+            return 400;
+        }else if (index == 6){
+            return 500;
+        }else if (index == 7){
+            return 600;
+        }else if (index == 8){
+            return 700;
+        }else if (index == 9){
+            return 800;
+        }else if (index == 10){
+            return 900;
+        }else if (index == 11){
+            return 1000;
+        }else {
+            return 0;
+        }
+    }
+
+
 }

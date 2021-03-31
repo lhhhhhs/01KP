@@ -199,6 +199,14 @@ public class Utils {
         }
     }
 
+    /**
+     * 动态规划求解分组背包问题
+     * @param N
+     * @param C
+     * @param dp
+     * @param profit
+     * @param weight
+     */
     public static void Dynamicprogramming(int N,int C,int[][] dp,Integer[][] profit,Integer[][] weight){
         long currentTimeMillis = System.currentTimeMillis();
         for (int i = 1; i <= N; i++) {

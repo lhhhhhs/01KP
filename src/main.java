@@ -49,7 +49,7 @@ public class main {
                     System.out.println(data.getList());
                     break;
                 case 5:
-                    Utils.getChart1(data.getProfit1(), data.getWeight1());
+                    Utils.getChart(data.getProfit1(), data.getWeight1());
                     break;
                 case 6:
                     s.close();

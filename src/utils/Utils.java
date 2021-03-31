@@ -127,26 +127,6 @@ public class Utils {
             profit = getTwoDimaensionalArray(split);
             weight = getTwoDimaensionalArray(split1);
             
-//            int k = 1;
-//            int l = 0;
-//            int x = 0;
-//            for (int j = 1; j <= split.length; j++) {
-//                profit[k][x++] = Integer.parseInt(split[j - 1]);
-//                if (j % 3 == 0 && j != 1) {
-//                    k++;
-//                    x = 0;
-//                }
-//            }
-//            k = 1;
-//            l = 0;
-//            x = 0;
-//            for (int j = 1; j <= split1.length; j++) {
-//                weight[k][x++] = Integer.parseInt(split1[j - 1]);
-//                if (j % 3 == 0 && j != 1) {
-//                    k++;
-//                    x = 0;
-//                }
-//            }
             //获取价值重量比排序
             for (int j = 1; j <= split1.length; j++) {
                 if (j % 3 == 0 && j != 1){
@@ -252,47 +232,6 @@ public class Utils {
      * @param weight
      */
     public static void getChart(Integer[] profit,Integer[] weight){
-        if (profit == null){
-            System.out.println("请先选择文件和组数");
-            return;
-        }
-        XYSeries data = new XYSeries("data");
-        for (int i = 0; i < profit.length; i++) {
-            data.add(weight[i], profit[i]);
-        }
-        //添加到数据集
-        XYSeriesCollection dataset = new XYSeriesCollection();
-        dataset.addSeries(data);
-
-        //实现简单的散点图，设置基本的数据
-        JFreeChart freeChart = ChartFactory.createScatterPlot(
-                "Data scatter plot",// 图表标题
-                "weight",//x轴方向数据标签
-                "profit",//y轴方向数据标签
-                dataset,//数据集，即要显示在图表上的数据
-                PlotOrientation.VERTICAL,//设置方向
-                true,//是否显示图例
-                true,//是否显示提示
-                false//是否生成URL连接
-        );
-
-        //以面板显示
-        ChartPanel chartPanel = new ChartPanel(freeChart);
-        chartPanel.setPreferredSize(new java.awt.Dimension(560, 400));
-
-        //创建一个主窗口来显示面板
-        JFrame frame = new JFrame("散点图");
-        frame.setLocation(500, 400);
-        frame.setSize(600, 500);
-
-        //将主窗口的内容面板设置为图表面板
-        frame.setContentPane(chartPanel);
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
-
-    public static void getChart1(Integer[] profit,Integer[] weight){
         if (profit == null){
             System.out.println("请先选择文件和组索引");
             return;
